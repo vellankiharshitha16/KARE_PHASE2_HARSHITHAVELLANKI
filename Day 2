@@ -1,0 +1,170 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int a =29;
+	    int b = a++;
+	    int c = --b;
+	    int d = c++;
+	    int e = ++d;
+		System.out.println("a = " + a + "b = "+"c = " + c + "d = " + d + "e = " + e);
+	}
+}
+
+#even or odd
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if(a%2==0)
+		System.out.println("even");
+		else
+		System.out.println("odd");
+	}
+}
+
+#stating a nd b are equal or not using the if
+  
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a,b;
+	    a = obj.nextInt();
+	    b = obj.nextInt();
+	    if (a == b)
+		System.out.println(a+"AND"+b+"ARE EQUAL");
+		else
+		System.out.println(a+"AND"+b+"NOT EQUAL");
+	}
+}
+
+#vote eligibilty
+  
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if(a>=18)
+		System.out.println("Eligible to vote");
+		else
+		System.out.println("Not Eligible to vote");
+	}
+}
+
+
+# Divisible by 3 
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if(a % 3 == 0)
+		System.out.println("Divisible by 3");
+		else
+		System.out.println("Not Divisible by 3 and the remainder is " + a % 3);
+	}
+}
+
+
+greatest of 2 numbers 
+import java.util.*;
+class Main {
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a,b;
+	    a = obj.nextInt();
+	    b = obj.nextInt();
+	    if (a > b)
+		System.out.println(a+"is greater");
+		else 
+		System.out.println(b+ "is greater");
+	}
+}
+
+# smallest among 3 numbers
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner (System.in);
+	    int a,b,c;
+	    a = obj.nextInt();
+	    b = obj.nextInt();
+	    c = obj.nextInt();
+	    if(a<b && a<c)
+		System.out.println(a+"is smallest");
+		else if (b<c)
+		System.out.println(b+"is smallest");
+		else
+		System.out.println(c+"is smallest");
+	}
+}
+
+// divisible by 3 print hi ,both 3 and 5 print hi hello 
+import java.util.*;
+class Main {
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if ( a % 3 == 0 && a % 5 == 0)
+		System.out.println("hi hello");
+		else if ( a % 3 == 0)
+		System.out.println("hi");
+		
+	}
+}
+
+
+8
+//Write a java program to check the given year is leap year or not
+//  i/p                         o/p
+//  2004                       Leap Year
+//  2000                       Leap Year
+//  2002                       Not a Leap Year
+//  1600                       Leap Year
+//  1900                       Not a Leap Year
+
+
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int year;
+	year = sc.nextInt();
+	if (year%400==0 || year%4==0 && year%100!=0)
+		System.out.print("Leap Year");
+	else
+		System.out.print("Not a Leap Year");
+}
+}
+
+
+
+
+//TO CHECK RAILWAY TIME IS VALID OR NOT
+//     i/p                          o/p
+//   0  0  0                       valid
+//  12  45  60                     invalid
+//  13  45  54                     valid
+//  24  6  4                       invalid
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int s = sc.nextInt();
+        if (h < 24 && m < 60 && s < 60)
+            System.out.println("valid");
+        else
+            System.out.println("invalid");
+    }
+}
