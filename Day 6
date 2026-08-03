@@ -1,0 +1,165 @@
+// To count number of digits in the given number 
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int n = obj.nextInt();
+	    int c=0;
+	    while(n!=0) 
+	    {
+	        n = n/10;
+	        c++;
+	    }
+		System.out.println("no.of digits : " +c);
+	}
+}
+
+
+// Write a java program to print the reverse number
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int n = obj.nextInt();
+	    int d,ans=0;
+	    while(n!=0)
+	    {
+	        d = n%10;
+	        ans = ans*10+d;
+	        n = n/10;
+	    }
+		System.out.println("Reverse number : " +ans);
+	}
+}
+
+//output
+//i/p : 1234
+//o/p : 4321
+
+// Write a java program to count odd number digits and even number digits 
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int d,ec=0,oc=0;
+        while(n!=0)
+        {
+            d=n%10;
+            if(d%2==0)
+            ec++;
+            else 
+            oc++;
+            n = n/10;
+        }
+        System.out.println("odd digit : " +oc);
+        System.out.println("even digit : " +ec);
+    }
+}
+
+// write a java program to count the prime numberrs in the given number
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int d,c=0;
+        while(n!=0)
+        {
+            d = n%10;
+            if(d==2||d==3||d==5||d==7)
+            c++;
+            n=n/10;
+        }
+        System.out.println("Prime numbers : " +c);
+    }
+}
+
+
+//write a java program to check the given number is harshad number or not
+// i/p : 18 
+//step 1:
+//step 2:
+//step3:to check the given number id completely divisible by sum of didgits 
+//(18%9==0)
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int sum = 0,d;
+        int temp = n;
+        while(n!=0)
+        {
+            d=n%10;//1%10=1
+            sum=sum+d;//8+1=9
+            n=n/10;//1/10=0
+        }
+        if(temp % sum == 0)
+        System.out.println("HARSHAD NUMBER");
+        else
+        System.out.println("NOT A HARSHAD NUMBER");
+    }
+    
+}
+
+//neon number
+
+//step1:
+//step2:
+//step3:sum all digts of square of n (sum=1+8=9)
+//step4:the given number n and sum of each digit in a square value both are equal . then consider the number as the neon number
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int temp=n;
+        int sqr=n*n;
+        int sum=0;
+        while(sqr!=0)
+        {
+            sum=sum+sqr%10;
+            sqr=sqr/10;
+            
+        }
+        if(sum == n)
+        System.out.println("NEON NUMBER");
+        else
+        System.out.println("NOT A NEON NUMBER");
+    }
+}
+
+
+
+//PERFECT NUBER
+
+STEP1:GET THE INPUT FROM THE USER N=6
+STEP2: FIND THE FACTOR OF N VALUE INCLDING 1 EXCLUDING THE GIVIN NUMBER(1,2,3)
+STEP 3 : FIND THE SUM OF THE FACTORS (SUM = 1+2+3)
+STEP4:COMPARE THE SUM AND GIVEN NUMBER . IF BOTH ARE EQUAL THEN IT IS A PERFECT NUMBER ELSE NOT A PERFECT NUMBER .
+
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int i,sum=0;
+        for(i=1;i<=n/2;i++)
+        {
+            if(n%i==0)
+            sum+=i;
+        }
+        if(sum==n)
+        System.out.println("Perfect number");
+        else
+        System.out.println("Not a perfect number");
+    }
+}
