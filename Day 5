@@ -1,0 +1,276 @@
+// program to print the following pattern
+// i/p 5
+
+// * * *
+// *   *
+// *   *
+// *   *
+// *****
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		int i,j;
+		for (i=0;i<n;i++){
+		    for(j=0;j<n;j++){
+		        if(i==0 || i==n-1 || j==0 || j==n-1){
+		            System.out.print("*");
+		        }
+		        else{
+		            System.out.print(" ");
+		        }
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the no of lines
+5
+*****
+*   *
+*   *
+*   *
+*****
+
+
+// program to print the following pattern
+// i/p 5
+
+// * * * * *
+//  * * * *
+//   * * *
+//    * *
+//     *
+//    * *
+//   * * *
+//  * * * *
+// * * * * *
+//
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		int row,col;
+		for (row=0;row<n-1;row++){
+		    for(col=0;col<row;col++){
+		            System.out.print(" ");
+		        }
+		  for (col = 0; col < n-row; col++) {
+                System.out.print("* ");
+            }
+		    System.out.println();
+		}
+		for (row=0;row<n;row++){
+		    for(col=0;col<n-row-1;col++){
+		            System.out.print(" ");
+		        }
+		  for (col = 0; col <= row; col++) {
+                System.out.print("* ");
+            }
+		    System.out.println();
+		}
+	}
+}
+
+
+Output:
+Enter the no of lines
+5
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+
+
+// program to print the following pattern
+// i/p 5
+
+// 10101
+// 01010
+// 10101
+// 01010   
+// 10101    
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		int row,col;
+		for (row=0;row<n;row++){
+		    for(col=0;col<n;col++){
+		        if( (col+row) % 2 ==0){
+		            System.out.print("1");
+		        }
+		        else{
+		            System.out.print("0");
+		        }
+		  
+		    
+		}
+		System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the no of lines
+5
+10101
+01010
+10101
+01010
+10101
+
+// program to print the following pattern
+// i/p 5
+
+// ccccc
+// c
+// c
+// c
+// ccccc
+
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		int row,col;
+		for (row=0;row<n;row++){
+		    for(col=0;col<n;col++){
+		        if(row==0 || row==n-1||col == 0){
+		            System.out.print("c");
+		        }
+		        else{
+		                System.out.print(" ");
+		            }
+		        }
+		System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the no of lines
+5
+ccccc
+c
+c
+c
+ccccc
+
+
+// program to print the following pattern
+// i/p 4
+
+// * * * * * * *
+// * *       * *
+// *   *   *   *
+// *     *     *
+// *   *   *   *
+// * *       * *
+// * * * * * * *
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		n = 2*n-1;
+		int row,col;
+		for (row=0;row<n;row++){
+		    for(col=0;col<n;col++){
+		        if(row==0 || row==n-1||col == 0||col == n-1||row == col ||row+col == n-1){
+		            System.out.print("* ");
+		        }
+		        else{
+		            
+		                System.out.print("  ");
+		            }
+		        }
+		System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the no of lines
+4
+* * * * * * * 
+* *       * * 
+*   *   *   * 
+*     *     * 
+*   *   *   * 
+* *       * * 
+* * * * * * * 
+
+
+// program to print the following pattern
+// i/p 4
+
+// * * * * * * *
+//   *       * 
+//     *   *   
+//       *     
+//     *   *   
+//   *       * 
+// * * * * * * *
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of lines");;
+		int n = sc.nextInt();
+		n = 2*n-1;
+		int row,col;
+		for (row=0;row<n;row++){
+		    for(col=0;col<n;col++){
+		        if(row==0 || row==n-1||row == col ||row+col == n-1){
+		            System.out.print("* ");
+		        }
+		        else{
+		            
+		                System.out.print("  ");
+		            }
+		        }
+		System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the no of lines
+4
+* * * * * * * 
+  *       *   
+    *   *     
+      *       
+    *   *     
+  *       *   
+* * * * * * *
