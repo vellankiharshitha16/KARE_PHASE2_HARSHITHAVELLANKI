@@ -1,0 +1,109 @@
+// STRONG NUMBER
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int temp = n;
+        int c=0,d,sum=0;
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+        n = temp;
+        while(n!=0)
+        {
+            d=n%10;
+            sum = sum+(int)Math.pow(d,c);
+            n=n/10;
+        }
+        if(temp == sum)
+        System.out.println("ARMSTRONG NUMBER");
+        else
+        System.out.print("NOT AN ARMSTRONG NUMBER");
+    }
+}
+
+
+// ADAM NUMBER
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int rn=0,d,ans=0;
+        int sn = n*n;
+        while(n!=0)
+        {
+            d = n%10;
+            rn = rn*10+d;
+            n=n/10;
+        }
+        int srn = rn*rn;
+        while(srn!=0)
+        {
+          d=srn%10;
+          ans = ans *10+d;
+          srn=srn/10;
+        }
+        if (sn == ans)
+        System.out.println("ADAM NUMBER");
+        else
+        System.out.println("NOT AN ADAM NUMBER");
+    }
+}
+
+//AMICABLE PAIR
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n1 = obj.nextInt();
+        int n2 = obj.nextInt();
+        int s1=0,s2=0;
+        for(int i = 1;i<=n1/2;i++){
+            if(n1 % i == 0)
+            s1 = s1+i;
+        }
+        for(int i = 1;i<=n2/2;i++) {
+            if(n2 % i == 0)
+            s2 = s2+i;
+        }
+        if(s1==n2 && s2==n1)
+        System.out.println("AMICABLE PAIR");
+        else 
+        System.out.println("NOT AN AMICABLE PAIR");
+    }
+}
+
+
+//PRIME NUMBER
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int flag =0 ,c = 0;
+        if(n == 1){
+        System.out.print("NEITHER PRIME NOR COMPOSITE");;
+        return;
+        }
+        for(int i = 2;i<=n/2;i++)
+        {
+            if(n%i==0)
+            {
+                c++;
+                flag = 1;
+                System.out.print("NOT A PRIME NUMBER");
+            }
+        }
+        if(flag == 0)
+        System.out.print("PRIME NUMBER");
+    }
+}
