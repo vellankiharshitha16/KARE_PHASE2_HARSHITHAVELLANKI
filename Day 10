@@ -240,6 +240,47 @@ the transpose matrix is
 3 6 
 
 
+// to print the length of the string without using inbulit function
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        String S = obj.nextLine();
+        int c = 0;
+        for(char ch : S.toCharArray())
+        c++;
+        System.out.println(c);
+    }
+}
+
+output:
+hashitha
+9
+
+
+//to print the no.of words in the given string
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        String S = obj.nextLine();
+        int c = 0;
+        for(char ch : S.toCharArray())
+        {
+            if(ch == ' ')
+            c++;
+        }
+        System.out.println("Total no.of.words = " + (c+1));
+    }
+}
+
+output:
+i am very good girl
+5
+
+
+
 // write a java program to print the vowel count in the string
 import java.util.*;
 public class Main
@@ -258,8 +299,30 @@ public class Main
 }
 
 Output:
-hii i am srikathkanth
-vowel count :7
+aiswharya mam is good girl
+vowel count = 10
+
+// write a java program to print the consonant count in the string
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine().toLowerCase();
+		int ec=0;
+		for (char ch:s.toCharArray()){
+		    if( !(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')){
+		        ec++;
+		    }
+		}
+		System.out.print("consonat count :"+ec);
+	}
+}
+input
+dudue gives deepressionn 
+output
+consonat count :12
+
 
 // write a java program to reverse the given string
 import java.util.*;
@@ -283,5 +346,5 @@ public class Main
 }
 
 Output:
-srikanth
-htnakirs
+briyani
+inayirb
