@@ -1,0 +1,287 @@
+// write a java program to take the input of a 2D array of size r*c and print the array
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of rows and columns");
+		int r =sc.nextInt();
+		int c =sc.nextInt();
+		int arr[][] = new int[r][c];
+		System.out.println("Enter the elements into the array");
+		int i,j;
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = sc.nextInt();
+		    }
+		}
+		
+		System.out.println("the given array is ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        System.out.print(arr[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+
+Output:
+Enter the no of rows and columns
+3
+3
+Enter the elements into the array
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the given array is 
+1 2 3 
+4 5 6 
+7 8 9 
+
+// write a java program to find the elements of the n*n matrix
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the no of rows and columns");
+		int r =sc.nextInt();
+		int c =sc.nextInt();
+		int arr[][] = new int[r][c];
+		int sum=0;
+		System.out.println("Enter the elements into the array");
+		int i,j;
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = sc.nextInt();
+		        sum+=arr[i][j];
+		    }
+		}
+		
+		System.out.println("the given array is ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        System.out.print(arr[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+		System.out.println("The sum of the elements of the given array is " + sum);
+		
+	}
+}
+
+Output:
+Enter the no of rows and columns
+3
+3
+Enter the elements into the array
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the given array is 
+1 2 3 
+4 5 6 
+7 8 9 
+The sum of the elements of the given array is 45
+
+// write a java program to print the primary and secondary diagonal elements
+//i/p 3
+// 1 2 3 
+// 4 5 6
+// 7 8 9
+// o/p 
+// The primary diagonal elements are 
+//  1 5 6
+// the secondary diagonal elements are 
+// 3 5 7
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the matrix");
+		int r =sc.nextInt();
+		int arr[][] = new int[r][r];
+		int sum=0;
+		System.out.println("Enter the elements into the array");
+		int i,j;
+		for(i=0;i<r;i++){
+		    for(j=0;j<r;j++){
+		        arr[i][j] = sc.nextInt();
+		        sum+=arr[i][j];
+		    }
+		}
+		
+		System.out.println("the given array is ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<r;j++){
+		        System.out.print(arr[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+		System.out.println("The primary diagonal elements are");
+		for(i=0;i<r;i++){
+		    for(j=0;j<r;j++){
+		        if(i==j){
+		            System.out.print(arr[i][j]+" ");
+		        }
+		    }
+		}
+		System.out.println();
+		System.out.println("The secondary diagonal elements are");
+		for(i=0;i<r;i++){
+		    for(j=0;j<r;j++){
+		        if((i+j) == r-1){
+		            System.out.print(arr[i][j]+" ");
+		        }
+		    }
+		}
+	}
+}
+
+Output:
+Enter the size of the matrix
+3
+Enter the elements into the array
+1
+2
+3
+4
+5
+6
+7
+8
+9
+the given array is 
+1 2 3 
+4 5 6 
+7 8 9 
+The primary diagonal elements are
+1 5 9 
+The secondary diagonal elements are
+3 5 7 
+
+
+// write a java program to transpose the matrix
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the row and col the matrix");
+		int r =sc.nextInt();
+		int c =sc.nextInt();
+		int arr[][] = new int[r][c];
+		int tp[][] = new int[c][r];
+		int sum=0;
+		System.out.println("Enter the elements into the array");
+		int i,j;
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = sc.nextInt();
+		    }
+		}
+		
+		System.out.println("the given array is ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        System.out.print(arr[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        tp[j][i] = arr[i][j];
+		    }
+		}
+		System.out.println();
+		System.out.println("the transpose matrix is ");
+		for(i=0;i<c;i++){
+		    for(j=0;j<r;j++){
+		        System.out.print(tp[i][j] + " ");
+		    }
+		    System.out.println();
+		}
+	}
+}
+
+Output:
+Enter the row and col the matrix
+2
+3
+Enter the elements into the array
+1
+2
+3
+4
+5
+6
+the given array is 
+1 2 3 
+4 5 6 
+
+the transpose matrix is 
+1 4 
+2 5 
+3 6 
+
+
+// write a java program to print the vowel count in the string
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine().toLowerCase();
+		int ec=0;
+		for (char ch:s.toCharArray()){
+		    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+		        ec++;
+		    }
+		}
+		System.out.print("vowel count :"+ec);
+	}
+}
+
+Output:
+hii i am srikathkanth
+vowel count :7
+
+// write a java program to reverse the given string
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		char ch[] = str.toCharArray();
+		int s=0;
+		int e=str.length()-1;
+		while(s<e){
+		    char temp = ch[s];
+		    ch[s] = ch[e];
+		    ch[e] = temp;
+		    s++;
+		    e--;
+		}
+		System.out.println(new String(ch)); 
+	}
+}
+
+Output:
+srikanth
+htnakirs
