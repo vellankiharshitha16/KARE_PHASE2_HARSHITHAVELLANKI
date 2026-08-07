@@ -348,3 +348,47 @@ public class Main
 Output:
 briyani
 inayirb
+
+// unique element
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        String s =obj.nextLine();
+        int arr[] = new int[256];
+        int c=0;
+        for(char ch : s.toCharArray())
+        {
+            arr[ch]++;
+        }
+        for(int i=0;i<256;i++)
+        {
+            if(arr[i] == 1)
+            c++;
+        }
+        System.out.println("unique element is : " + c);
+    }
+}
+
+//DUPLICATE NUMBER
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        String s =obj.nextLine();
+        int arr[] = new int[256];
+        int c=0;
+        for(char ch : s.toCharArray())
+        {
+            arr[ch]++;
+        }
+        for(int i=0;i<256;i++)
+        {
+            if(arr[i] > 1)
+            c++;
+        }
+        System.out.println("unique element is : " + c);
+    }
+}
+
