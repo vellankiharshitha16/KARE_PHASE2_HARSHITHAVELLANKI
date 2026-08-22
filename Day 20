@@ -1,0 +1,217 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> obj = new ArrayList();
+        obj.add(10);
+        obj.add(20);
+        obj.add(30);
+        System.out.print(obj);
+    }
+}
+Output:
+[10, 20, 30]
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> obj = new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i=0;i<n;i++){
+            obj.add(sc.nextInt());
+        }
+        System.out.print(obj);
+    }
+}
+Output:
+5
+10 20 30 40 50 
+[10, 20, 30, 40, 50]
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> obj = new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i=0;i<n;i++){
+            obj.add(sc.nextInt());
+        }
+        obj.add(2,30);
+        System.out.print(obj);
+    }
+}
+Output:
+5
+10 50 50 50 50 
+[10, 50, 30, 50, 50, 50]
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> obj = new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i=0;i<n;i++){
+            obj.add(sc.nextInt());
+        }
+        obj.add(2,30);
+        obj.set(1,100);
+        System.out.print(obj);
+    }
+}
+Output:
+5
+10 20 30 40 50
+[10, 100, 30, 30, 40, 50]
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        ArrayList<Integer> obj = new ArrayList<Integer>();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i=0;i<n;i++){
+            obj.add(sc.nextInt());
+        }
+        int ind = sc.nextInt();
+        int val = sc.nextInt();
+        obj.add(ind,val);
+        int in = sc.nextInt();
+        int vl = sc.nextInt();
+        obj.set(in,vl);
+        System.out.print(obj);
+    }
+}
+
+Output:
+5
+102  20 30 40 50
+1
+100
+2
+200
+[10, 100, 200, 30, 40, 50]
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        LinkedList obj = new LinkedList();
+        obj.add(10);
+        obj.add(20);
+        obj.add(30);
+        System.out.print(obj);
+    }
+}
+
+Output:
+[10, 20, 30]
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        LinkedList obj = new LinkedList();
+        int i;
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        for(i=0;i<n;i++){
+            obj.add(sc.nextInt());
+        }
+        System.out.print("LinkedList elements");
+        System.out.print(obj);
+        int ind = sc.nextInt();
+        int val = sc.nextInt();
+        obj.add(ind,val);
+        System.out.println(obj);
+        System.out.println("Insert at the first position");
+        System.out.println("enter the first element to be added");
+        int d =sc.nextInt();
+        obj.addFirst(d);
+        System.out.println(obj);
+        System.out.println("Enter the last element to be added");
+        d = sc.nextInt();
+        obj.addLast(d);
+        System.out.println(obj);
+    }
+}
+
+Output:
+5
+10 20 30 40 50  
+LinkedList elements[10, 20, 30, 40, 50]3
+300
+[10, 20, 30, 300, 40, 50]
+Insert at the first position
+enter the first element to be added
+56
+[56, 10, 20, 30, 300, 40, 50]
+Enter the last element to be added
+89
+[56, 10, 20, 30, 300, 40, 50, 89]
+
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Stack<Integer> obj = new Stack();
+        int i;
+        Scanner sc = new Scanner(System.in);
+        int n =sc.nextInt();
+        for(i=0;i<n;i++){
+            obj.push(sc.nextInt());
+        }
+        System.out.println("Stack elements");
+        System.out.println(obj);
+        obj.pop();
+        System.out.println("After removing one element");
+        System.out.println(obj);
+        System.out.println("The peek element of the stack is ");
+        System.out.println(obj.peek());
+        System.out.println(obj);
+        System.out.println("check whether the stack is empty or not");
+        System.out.println(obj.empty());
+        System.out.println("search for the element 10 in the stack");
+        System.out.println(obj.search(10));
+        obj.add(50);
+        System.out.println("After adding the element 50 at the end of the stack");
+        System.out.println(obj);
+        System.out.println("Enter the index you would like to get the value");
+        int idx = sc.nextInt();
+        System.out.println(obj.get(idx));
+        System.out.println("Enter the value you would like to check whether its in the stack or not");
+        int val = sc.nextInt();
+        System.out.println(obj.contains(val));
+        System.out.println("Enter the index of the you would like to remove");
+        idx = sc.nextInt();
+        obj.remove(idx);
+        System.out.println(obj);
+        
+    }
+}
+
+Output:
+5
+10 20 30 40 50 
+Stack elements
+[10, 20, 30, 40, 50]
+After removing one element
+[10, 20, 30, 40]
+The peek element of the stack is 
+40
+[10, 20, 30, 40]
+check whether the stack is empty or not
+false
+search for the element 10 in the stack
+4
+After adding the element 50 at the end of the stack
+[10, 20, 30, 40, 50]
+Enter the index you would like to get the value
+4
+50
+Enter the value you would like to check whether its in the stack or not
+44
+false
+Enter the index of the you would like to remove
+4
+[10, 20, 30, 40]
